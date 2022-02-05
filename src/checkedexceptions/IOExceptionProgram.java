@@ -2,13 +2,13 @@ package checkedexceptions;
 
 import java.io.FileNotFoundException;
 
-import java.io.PrintWriter;
+import java.io.FileReader;
+
 
 public class IOExceptionProgram {
     public static void main(String[] args) {
-        PrintWriter printWriter;
         try {
-            printWriter = new PrintWriter("abc.txt");
+            FileReader fileReader = new FileReader("E:\\hari.txt");
         } catch (FileNotFoundException e) {
             System.out.println("file not found exception caught");
             System.out.println(e.getLocalizedMessage());
